@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style>
+    li{
+      padding-right:12px;
+    }
+  </style> 
+</head>
+<body>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      
+
+      <a class="navbar-brand" href="#">Fashion Chipps</a>
+    </div>
+    
+        
+    <ul class="nav navbar-nav">
+      
+      <li class="dropdown"><a class="dropdown-toggle navbar-brand" data-toggle="dropdown" href="#">Shop by category <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <!-- <li><a href="#">Electronics </a></li> -->
+          <li><a href="{% url 'cloth' %}">Clothing</a></li>
+
+          <li><a href="{% url 'foot' %}">Footwear</a></li>
+          <li><a href="{% url 'kids' %}">Kids</a></li>
+          <li><a href="{% url 'jew' %}">Jewellery</a></li>
+          <li><a href="{% url 'sports' %}">Sports accessories</a></li>
+          <!-- <li><a href="#">Home decors</a></li>
+
+          <li><a href="#">Cleaning</a></li> -->
+          <!-- <li><a href="#">Books</a></li> -->
+
+        </ul>
+      </li>
+
+      <li><a href="{% url 'la' %}" style="padding-top:10px;padding-right: 10px;font-size:20px;color: white">Latest arrivals</a></li>
+      <li><a href="{% url 'trends' %}"style="padding-right: 10px;font-size:20px;color: white">Trending</a></li>
+      <li><a href="{% url 'bs' %}" style="padding-right: 10px;font-size:20px;color: white">Best sellers</a></li>
+      <li><a href="{% url 'tb' %}" style="padding-right: 10px;font-size:20px;color: white">Top Brands</a></li>
+
+    </ul>
+    <form class="form-inline four" action="/search1/">
+      <input class="form-control" name="q" type="search" placeholder="Search Product" aria-label="Search" style="padding-left: 50px;font-size: 15px;">
+      <button class="btn"style="padding: 10px;font-size: 20px;color: white" type="submit"> Search</button>
+      </form>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="{%url 'signUp'%}" style="padding-right: 10px;font-size:20px;color: white"><span class="glyphicon glyphicon-user"></span> Sign Up</a><!--button onclick="{%url 'signIn'%}" type='button' class="btn btn-success" data-toggle="modal" data-target="#popUpWindow">Sign Up</button--></li>
+      <li><a href="{%url 'signIn'%}" style="font-size:20px;color: white"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+    
+  </div>
+</nav>
+</body>
+</html>

@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{% block title %}{% endblock title %}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style>
+  	#x{
+  		padding-top: 100px;
+  	}
+  </style>
+</head>
+<body>
+	{% include 'shop/navbar2.html' %}
+
+
+{% block body %}
+
+<div id="x" class="container col-md-6">
+	<table  class="table">
+		<tr>
+		<td><b>Product name</b></td>
+			<td><b>Product Image</b></td>
+			<td><b>Price</b></td>
+		</tr>
+		
+	
+		
+			{% for info in data %}
+				<tr>
+					<td>{{info.product.name}}</td>
+					<td>
+						<div class="card" style="width:200px">
+							<img class="card-img-top" src="{{info.product.imgup.url}}" alt="Card image" width="200px" height="200px">
+						</div>
+					</td>
+					<td>Rs.{{info.product.price}}</td>
+					<td>
+						<div class="btn" style="padding-top: 60px">
+							<form action="{% url 'remove' info.id %}" method="POST">
+			    			{% csrf_token %}
+			    			{{form.as_p}}
+		        				<button type="submit" class="btn btn-danger pt-8">Remove</button>
+		        			</form>
+		    			</div>
+					</td>
+					
+				</tr>
+
+			{% endfor %}
+
+			
+		
+		
+	</table>
+	<hr>
+	<tr>
+		<div class="btn" style="padding-left: 450px">
+		
+		<td><b>Total:</b> Rs.{{total}}</td>
+	</div>
+	</tr>
+	
+
+	
+	<tr>
+		<td>
+	
+	<div class="btn" style="padding-left: 200px" >
+				<form action="{% url 'main' %}" method="POST">
+			    {% csrf_token %}
+			    {{form.as_p}}
+		        <button type="submit" class="btn btn-primary pt-8">Continue shopping</button>
+		        </form>
+		    </div>
+		</td>
+		<td>
+			<div class="btn" style="padding-left: 70px">
+				<form action="{% url 'purchase' %}" method="POST">
+			    {% csrf_token %}
+			    {{form.as_p}}
+		        <button type="submit" class="btn btn-primary pt-8">Place order</button>
+		        </form>
+		    </div>
+		</td>
+		
+	
+</div>
+</tr>
+<hr>
+</div>
+
+</body>
+{% endblock body %}

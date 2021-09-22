@@ -1,0 +1,81 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <title> 
+        
+    </title>  
+      
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style> 
+        img { 
+            max-width: 80%; 
+            max-height: 50%; 
+            padding-top:10px; 
+        } 
+        h1 { 
+            color: green; 
+        } 
+        .card{
+            width: 400px;
+
+        }
+        .row{
+            padding-top: 20px;
+        }
+    </style> 
+</head>  
+  
+<body> 
+{% include 'shop/navbar2.html' %}
+
+    <h2 style="color:green;text-align:left;">  
+        Searched products: 
+    </h2>  
+  
+    <div class="container"> 
+        <div class="card-group"> 
+  
+            <!--bootstrap card with 3 horizontal images-->
+            <div class="row"> 
+                {%for product in p1%}
+                <div class="card col-md-4"> 
+                    <img class="card-img-top" src="{{product.imgup.url}}"alt="Card image">
+  
+                    <div class="card-body"> 
+                        <h4 class="card-title">{{product.name}}</h4> 
+                        <p class="card-text">Price:Rs.{{product.price}} </p>
+                    </div> 
+                    <div class="card-footer text-center"> 
+                        <form action="{% url 'signIn'  %}" method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit" class="btn btn-primary pt-8">Add to cart</button>
+                </form>
+            </div>
+                </div> 
+                {%endfor%}
+  
+                
+                  
+                
+            </div> 
+        </div> 
+    </div>
+    <div class="btn" style="padding-left: 70px">
+                <form action="{% url 'home' %}" method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit" class="btn btn-primary pt-8">Back</button>
+                </form>
+            </div> 
+</body> 
+</html>                     
+

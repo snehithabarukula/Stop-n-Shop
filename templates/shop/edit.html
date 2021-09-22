@@ -1,0 +1,29 @@
+
+	{% load static %}
+<!-- {% block title%} User Profile Update{% endblock title%} -->
+{% block body %}
+
+<center>
+<div class="container">
+	<div class="jumbotron col-md-8" style="margin: auto;margin-top: 40px;">
+		<form method="POST" action="" enctype="multipart/form-data">
+			{% csrf_token%}
+			<table class="table">
+			{%for k in usg%}
+			<tr>
+				<td><h4>{{k.label_tag}}</h4></td>
+				<td><h4>{{k}}</h4></td>
+			</tr>
+		    {% endfor %}
+		    </table>
+		   <div class="btn" style="padding-left: 70px">
+		    <button class="btn btn-primary pt-8" type="submit"><h5>Save Changes</h5></button>
+		</div>
+		
+		</form>
+	</div>
+</div>
+</center>
+{% endblock body %}
+
+

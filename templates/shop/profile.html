@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>profile</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        
+  <style>
+  	/*b{
+  		font-family: Algerian;
+  		font-size: 30px;
+  	}*/
+  	span{
+  		font-family: Calisto MT;
+  		font-size: 30px;
+
+  	}
+  	li{
+        padding-right: 10px;
+    } 
+  </style>
+</head>
+<body>
+	{% block body %}
+	{% include 'shop/navbar2.html' %}
+<div class="container col-md-6">
+	<table class="table">
+		<tr>
+		
+
+		<td><b style="font-family: Algerian;font-size: 30px">First name: </b><span>{{fn}}</span></td><br></tr>
+		<tr>
+		<td><b style="font-family: Algerian;font-size: 30px">Last name: </b><span>{{ln}}</span></td><br></tr>
+		<tr>
+
+		<td><b style="font-family: Algerian;font-size: 30px">Mail-id: </b><span>{{mail}}</span></td><br>
+	</tr>
+
+	</table>
+	<tr>
+		<td>
+	
+	<div class="btn" style="padding-left: " >
+				<form action="{% url 'edit' i %}" method="POST">
+			    {% csrf_token %}
+			    {{form.as_p}}
+		        <button type="submit" class="btn btn-primary pt-8">Edit</button>
+		        </form>
+		    </div>
+		</td>
+		<td>
+			<div class="btn" style="padding-left: 70px">
+				<form action="{% url 'main' %}" method="POST">
+			    {% csrf_token %}
+			    {{form.as_p}}
+		        <button type="submit" class="btn btn-primary pt-8">Back</button>
+		        </form>
+		    </div>
+		</td>
+	</tr>
+	
+
+
+</body>
+{% endblock body%}
+</html>

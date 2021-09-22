@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <title> 
+        
+    </title>  
+      
+    <meta charset="utf-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+  
+    <link rel="stylesheet" href=  
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">  
+      
+    <script src=  
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">  
+    </script>  
+      
+    <script src=  
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">  
+    </script>  
+      
+    <script src=  
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">  
+    </script>  
+      
+    <style> 
+        img { 
+            max-width: 80%; 
+            max-height: 50%; 
+            padding-top:10px; 
+        } 
+        h2{ 
+            color: green; 
+            padding-top: 30px;
+        } 
+        .card{
+            width:200px;
+
+
+            
+
+        }
+        /*.row{
+            padding-right: 20px;
+        }*/
+    </style> 
+</head>  
+  
+<body>  
+     
+ {% include 'shop/navbar2.html' %}
+  
+     
+  
+    <div class="container"> 
+        <div class="card-group"> 
+  
+            <!--bootstrap card with 3 horizontal images-->
+            <div class="row"> 
+                {%for product in f%}
+                <div class="card col-md-4"> 
+                    <img class="card-img-top" src="{{product.imgup.url}}"alt="Card image">
+  
+                    <div class="card-body"> 
+                        <h4 class="card-title">{{product.name}}</h4> 
+                        <p class="card-text">Price:Rs.{{product.price}} </p>
+                    </div> 
+                    <div class="card-footer text-center"> 
+                        {% if user.is_authenticated %}
+                        <form action="{% url 'addtocart' product.id %}" method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit" class="btn btn-primary pt-8">Add to cart</button>
+                </form>
+                        
+                {% else%}
+                <form action="{% url 'signIn' %}" method="POST">
+                        
+                {% csrf_token %}
+
+                {{form.as_p}}
+                <button type="submit" class="btn btn-primary pt-8">Add to cart</button>
+                </form>
+                
+                {%endif%}
+            </div>
+                </div> 
+                {%endfor%}
+  
+                
+                  
+                
+            </div> 
+        </div> 
+    </div> 
+    
+</body> 
+</html>                     

@@ -1,0 +1,17 @@
+ {% include 'shop/navbar.html' %}
+{% block title %} SigIn Form{% endblock title %}
+
+{% block body %}
+<div class="container" style="padding-top: 50px">
+		<form action="{%url 'signIn'%}" method="POST">
+		<div class="card col-md-4" style="margin: auto;margin-top:30px;">
+			<div  class="card-header bg-success">Login Form</div>
+			<div class="card-body">
+				{% csrf_token %}
+				{{ form.as_p}}
+				<button type="submit" class="btn btn-primary">SignIn</button>
+			</div>
+		</div>
+	</form>
+</div>
+{% endblock body%}
