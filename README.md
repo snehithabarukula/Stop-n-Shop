@@ -35,29 +35,29 @@ you’ll need to know how to setup the following to run the project:
 
 ### UBUNTU
 Ubuntu Linux 20.04 LTS includes Python 3.8.5 by default. You can confirm this by running the following command in the bash terminal:
- .. code-block:: shell
+ 
 
       python3 -V
       Python 3.8.5
 You can install pip3 in the bash terminal using:
- .. code-block:: shell
+ 
       
       sudo apt install python3-pip
 ### MAC
 macOS "El Capitan" and other more recent versions do not include Python 3. You can confirm this by running the following commands in the zsh or bash terminal to check upon installation:
- .. code-block:: shell
+ 
       
       python3 -V
       Python 3.9.0
       
 You can similarly check that pip3 is installed by listing the available packages:
- .. code-block:: shell
+ 
  
       pip3 list
       
 ### Windows 
 You can then verify that Python 3 was installed by entering the following text into the command prompt:
-  .. code-block:: shell
+
 
       py -3 -V
       Python 3.8.6
