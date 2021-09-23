@@ -99,7 +99,7 @@ Once you've created a virtual environment, and called workon to enter it, you ca
 9) To run  the server :
   
   
-       pythin manage.py runserver
+       python manage.py runserver
        
        
 ## Project Flow 
