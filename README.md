@@ -29,7 +29,10 @@ you’ll need to know how to setup the following to run the project:
 - Set up a Django project
 - Start a Django app
 
+
 ## Installing Python 
+http://github.com - automatic!
+[Python](https://www.python.org/downloads/)
 ### UBUNTU
 Ubuntu Linux 20.04 LTS includes Python 3.8.5 by default. You can confirm this by running the following command in the bash terminal:
  .. code-block:: shell
@@ -53,9 +56,17 @@ You can similarly check that pip3 is installed by listing the available packages
       pip3 list
       
 ### Windows 
-  
+You can then verify that Python 3 was installed by entering the following text into the command prompt:
+.. code-block:: shell
 
-        
+    py -3 -V
+    Python 3.8.6
+    
+The Windows installer incorporates pip3 (the Python package manager) by default. You can list installed packages as shown:
+.. code-block:: shell
+    pip3 list
+    
+
 
 1) The system should have a python setup before setting up django. Installing a latest version of python ide is must.
 2) In the next step you need to install a virtualwrapper which is a virtual environment specifically to run this project. 
