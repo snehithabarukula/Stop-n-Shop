@@ -71,12 +71,19 @@ The Windows installer incorporates pip3 (the Python package manager) by default.
 
 ## Project Set Up 
 1) The system should have a python setup before setting up django. Installing a latest version of python ide is must.
-2) In the next step you need to install a virtualwrapper which is a virtual environment specifically to run this project. 
+
+3) In the next step you need to install a virtualwrapper which is a virtual environment specifically to run this project. 
 In cmd create: 
   .. code-block:: shell
 
        pip install virtualenwrapper -win
-     
+Once you've created a virtual environment, and called workon to enter it, you can use pip3 to install Django :
+  .. code-block:: shell
+  
+  
+       pip3 install django~=3.1
+  
+
 4) Create the virtual environment:
   .. code-block:: shell
   
