@@ -105,7 +105,8 @@ Once you've created a virtual environment, and called workon to enter it, you ca
 Fashion Chipps involves two logical entities - The frontend,Backend (Payment mechanism and database). The frontend involves a series of HTML and CSS web pages that displays products and basic design of the website. The backend involves the database management system software where all the data of the product and users is stored. The database is responsible for the structure of data. The main purpose of the database is to digitally store information that can be captured, retrieved, and distributed easily at a later time. Through this system, information such as transactional or systems oriented data can be organized and tracked based on chosen settings. This also gives businesses the ability to analyze and track information about the products, sales, and customers that have been input into the database.
 
 ## References
-References
-[1] Building the Design of e-commerce.(n.d), Retrieved from
+- Building the Design of e-commerce.(n.d), Retrieved from
 https://www.researchgate.net/publication/327897515_Building_the_Design_of_E- Commerce
-[2] Design and Implementation of E-Commerce Website for Shopping.(n.d),Retrieved from https://www.researchgate.net/publication/335126262_Design_and_Implementation _of_E-Commerce_Website_for_Shopping
+
+- Design and Implementation of E-Commerce Website for Shopping.(n.d), Retrieved from 
+https://www.researchgate.net/publication/335126262_Design_and_Implementation _of_E-Commerce_Website_for_Shopping
