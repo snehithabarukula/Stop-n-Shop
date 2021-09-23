@@ -63,7 +63,7 @@ You can then verify that Python 3 was installed by entering the following text i
       Python 3.8.6
     
 The Windows installer incorporates pip3 (the Python package manager) by default. You can list installed packages as shown:
-  .. code-block:: shell
+
   
       pip3 list
 
@@ -74,29 +74,30 @@ The Windows installer incorporates pip3 (the Python package manager) by default.
 
 3) In the next step you need to install a virtualwrapper which is a virtual environment specifically to run this project. 
 In cmd create: 
-  .. code-block:: shell
+
 
        pip install virtualenwrapper -win
+       
 Once you've created a virtual environment, and called workon to enter it, you can use pip3 to install Django :
-  .. code-block:: shell
+  
   
   
        pip3 install django~=3.1
   
 
 4) Create the virtual environment:
-  .. code-block:: shell
+  
   
        mkvirtualenv environment_name
        
 6) Install Django :
-  .. code-block:: shell
+  
   
        pip install django
        
 8) mkdir projects -> cd projects -> django-admin startproject projectname (Here projects is the name of the folder I created on my desktop)
 9) To run  the server :
-  .. code-block:: shell
+  
   
        pythin manage.py runserver
        
