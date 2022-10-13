@@ -12,11 +12,15 @@ Fashion chipps is a e-commerce website built using html,css,javascript and boots
 # Technologies Used 
 1) Front-end: In ecommerce, the technology usually refers to the programming languages that are used to develop the platform. Fashion Chipps is an ecommerce website built using html,css,javascript and bootstrap and Python Django
 2) Back-end : The Primary database is used to collect the details from the webpages and it's responsible for the data that are shown on UI (front-end). We used Mysql database software.
-
+3) Fashion Chipps uses Python Django as backend.
 
 # System Requirements
-1) The system shouls have jupyter notebook or google colab to run the ML model. 
-2) The required python packages are as follows, (here I have only mentioned the packages)
+
+Django web applications can be run on almost any machine that can run the Python 3 programming language: Windows, macOS, Linux/Unix, Solaris, to name just a few. Almost any computer should have the necessary performance to run Django during development.
+- FOR WINDOWS- Windows 7 version OS, 800MHz Intel Pentium III or equivalent processor, 512MB memory and an additional 250 MB of free disk space.
+- FOR UBUNTU- 9.10 version, 800MHz Intel Pentium III or equivalent processor, 512 MB memory and an additional 150 MB of free disk space.
+- FOR MAC OS- 10.7 Intel version, Dual-Core Intel processor, 512 memory and additional 150 MB of free disk space.
+- Latest version of python. Python 2.7 cannot be used with the current releases of Django (The Django 1.11.x series is the last to support Python 2.7).
 
 
 # Set Up
