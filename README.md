@@ -10,7 +10,7 @@ Fashion chipps is a e-commerce website built using html,css,javascript and boots
 4) Project Flow 
 
 # Technologies Used 
-1) Front-end: In ecommerce, the technology usually refers to the programming languages that are used to develop the platform. Fashion Chipps is an ecommerce website built using html,css,javascript and bootstrap and Python Django
+1) Front-end: In ecommerce, the technology usually refers to the programming languages that are used to develop the platform. Fashion Chipps is an ecommerce website built using html,css,javascript and bootstrap.
 2) Back-end : The Primary database is used to collect the details from the webpages and it's responsible for the data that are shown on UI (front-end). We used Mysql database software.
 3) Fashion Chipps uses Python Django as backend.
 
